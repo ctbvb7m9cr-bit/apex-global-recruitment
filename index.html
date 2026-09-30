@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apex Global Recruitment Ltd provides professional staffing solutions across hospitality, housekeeping, hotel services, kitchen support and cleaning.">
+  <title>Apex Global Recruitment Ltd | Quality Staff. Stronger Businesses.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#171717; --cream:#f7f2e9; --cream2:#fffdf9; --gold:#b68a3a;
+      --gold2:#d6b56c; --line:#dfd5c5; --muted:#6d675e; --white:#fff;
+      --shadow:0 18px 55px rgba(32,25,15,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:var(--cream2);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:var(--ink);color:#eee8dc;text-align:center;padding:9px 16px;font-size:12px;letter-spacing:.08em}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(182,138,58,.18)}
+    .nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.14em}
+    .brand img{width:58px;height:58px;object-fit:contain}
+    .brand span{font-family:"Cormorant Garamond",serif;font-size:24px;letter-spacing:.09em}
+    nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:600}
+    nav a{transition:.2s} nav a:hover{color:var(--gold)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--gold);padding:13px 20px;border-radius:2px;font-weight:700;font-size:13px;transition:.25s}
+    .nav-cta{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .nav-cta:hover{background:var(--gold);border-color:var(--gold)}
+    .menu{display:none;background:none;border:0;font-size:26px}
+    .hero{background:linear-gradient(110deg,rgba(247,242,233,.98) 0%,rgba(247,242,233,.91) 54%,rgba(247,242,233,.55) 100%),url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85") center/cover;min-height:650px;display:flex;align-items:center}
+    .hero-inner{padding:90px 0;max-width:720px}
+    .eyebrow{font-size:12px;letter-spacing:.22em;color:var(--gold);font-weight:700;text-transform:uppercase;margin-bottom:18px}
+    h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.03}
+    h1{font-size:clamp(56px,7vw,92px);font-weight:600;letter-spacing:-.025em}
+    h1 em{font-style:normal;color:var(--gold)}
+    .hero p{font-size:18px;max-width:620px;color:#514c44;margin:25px 0 32px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .btn-primary:hover{background:var(--gold);border-color:var(--gold)}
+    .btn-outline{background:transparent}
+    .btn-outline:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .strip{background:var(--ink);color:#fff;padding:22px 0}
+    .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+    .strip strong{display:block;color:var(--gold2);font-family:"Cormorant Garamond",serif;font-size:24px}
+    .strip span{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:#d8d2c8}
+    section{padding:95px 0}
+    .section-head{text-align:center;max-width:740px;margin:0 auto 50px}
+    .section-head h2{font-size:52px}
+    .section-head p{color:var(--muted);margin-top:15px}
+    .services{background:var(--cream)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--cream2);border:1px solid var(--line);padding:34px 28px;min-height:205px;transition:.25s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(182,138,58,.5)}
+    .icon{width:45px;height:45px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:19px;margin-bottom:22px}
+    .card h3{font-size:28px;margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+    .split h2{font-size:56px}
+    .split p{color:var(--muted);margin:18px 0}
+    .checklist{display:grid;gap:14px;margin:26px 0}
+    .check{display:flex;gap:12px;align-items:flex-start}.check b{color:var(--gold);font-size:18px}
+    .feature-panel{background:var(--ink);color:#fff;padding:48px;position:relative;overflow:hidden}
+    .feature-panel:after{content:"A";position:absolute;right:-30px;bottom:-110px;font:700 300px "Cormorant Garamond";color:rgba(182,138,58,.12)}
+    .feature-panel h3{font-size:42px}.feature-panel p{color:#d5d0c8}
+    .feature-stat{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:35px;position:relative;z-index:1}
+    .feature-stat div{border-top:1px solid rgba(214,181,108,.45);padding-top:15px}.feature-stat strong{display:block;color:var(--gold2);font-size:27px;font-family:"Cormorant Garamond"}
+    .audience{background:#fff}
+    .audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .audience-card{padding:48px;background:var(--cream);border:1px solid var(--line)}
+    .audience-card h3{font-size:40px;margin-bottom:12px}.audience-card p{color:var(--muted);margin-bottom:24px}
+    .contact{background:var(--ink);color:#fff}
+    .contact .section-head p{color:#c9c4bc}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}
+    .contact-info{display:grid;gap:18px}
+    .contact-item{border-bottom:1px solid #383838;padding-bottom:18px}
+    .contact-item small{display:block;color:var(--gold2);text-transform:uppercase;letter-spacing:.14em;margin-bottom:4px}
+    form{background:#fff;color:var(--ink);padding:34px;display:grid;gap:14px}
+    input,textarea,select{width:100%;padding:14px 15px;border:1px solid #d8d0c4;background:#fff;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    form button{cursor:pointer}
+    footer{background:#111;color:#c9c4bc;padding:35px 0}
+    .footer-row{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer-brand{color:#fff;font-family:"Cormorant Garamond";font-size:26px}.footer-row small{font-size:11px}
+    @media(max-width:900px){
+      nav{display:none}.menu{display:block}.nav{height:74px}
+      .hero{min-height:600px}.service-grid{grid-template-columns:1fr 1fr}.split,.contact-grid{grid-template-columns:1fr}.audience-grid{grid-template-columns:1fr}
+      .strip-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:600px){
+      .brand span{font-size:20px}.brand img{width:48px;height:48px}
+      section{padding:70px 0}.hero-inner{padding:70px 0}.hero p{font-size:16px}
+      .service-grid{grid-template-columns:1fr}.section-head h2,.split h2{font-size:43px}
+      .feature-panel,.audience-card{padding:32px 24px}.footer-row{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">SPECIALIST HOSPITALITY & SERVICE STAFFING • COVENTRY & SURROUNDING AREAS</div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Apex Global Recruitment Ltd home">
+        <img src="apex-logo.png" alt="Apex Global Recruitment logo">
+        <span>APEX GLOBAL</span>
+      </a>
+      <nav>
+        <a href="#about">About</a><a href="#services">Services</a><a href="#employers">Employers</a><a href="#jobs">Jobs</a><a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Request Staff</a>
+      </nav>
+      <button class="menu" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="eyebrow">A trusted recruitment partner</div>
+        <h1>Exceptional people.<br><em>Exceptional service.</em></h1>
+        <p>Apex Global Recruitment connects hospitality and service businesses with dependable, professional staff across Coventry, Birmingham, Hinckley, Daventry and surrounding areas — helping teams perform at their best.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Request Staff →</a>
+          <a class="btn btn-outline" href="#jobs">Apply for a Job →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="container strip-grid">
+        <div><strong>6+ Years</strong><span>Hospitality experience</span></div>
+        <div><strong>Flexible</strong><span>Staffing solutions</span></div>
+        <div><strong>Reliable</strong><span>People & support</span></div>
+        <div><strong>UK Focus</strong><span>Professional service</span></div>
+      </div>
+    </div>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Our services</div>
+          <h2>Staffing solutions built around your business.</h2>
+          <p>From hotel operations to cleaning and kitchen support, we help businesses find the people they need to keep standards high.</p>
+        </div>
+        <div class="service-grid">
+          <article class="card"><div class="icon">⌂</div><h3>Housekeeping</h3><p>Professional housekeeping support for guest rooms and wider hotel operations.</p></article>
+          <article class="card"><div class="icon">◆</div><h3>Hotel Services</h3><p>Reliable staff for hospitality environments where presentation and service matter.</p></article>
+          <article class="card"><div class="icon">♨</div><h3>Kitchen Porter</h3><p>Dependable kitchen support including cleaning, preparation and day-to-day assistance.</p></article>
+          <article class="card"><div class="icon">✦</div><h3>Kitchen Cleaning</h3><p>Cleaning support designed around hygiene, cleanliness and operational standards.</p></article>
+          <article class="card"><div class="icon">✧</div><h3>General Cleaning</h3><p>Flexible cleaning teams for commercial and hospitality environments.</p></article>
+          <article class="card"><div class="icon">+</div><h3>Flexible Staffing</h3><p>Short-term or ongoing staffing support shaped around your operational needs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">Why Apex Global</div>
+          <h2>Professional staffing with a personal approach.</h2>
+          <p>We understand that hospitality businesses need more than people on a rota. They need dependable staff who understand standards, teamwork and the importance of every guest experience.</p>
+          <div class="checklist">
+            <div class="check"><b>✓</b><span><strong>Industry understanding</strong><br>Built around real hospitality and service environments.</span></div>
+            <div class="check"><b>✓</b><span><strong>Flexible support</strong><br>Staffing solutions that can adapt to changing demand.</span></div>
+            <div class="check"><b>✓</b><span><strong>Professional communication</strong><br>A straightforward recruitment and support experience.</span></div>
+          </div>
+          <a class="btn btn-primary" href="#contact">Talk to Apex →</a>
+        </div>
+        <div class="feature-panel">
+          <div class="eyebrow">Apex Global Recruitment Ltd</div>
+          <h3>Quality staff.<br>Stronger businesses.</h3>
+          <p>Our goal is simple: connect businesses with people who can contribute to smooth, professional operations.</p>
+          <div class="feature-stat">
+            <div><strong>Hospitality</strong><span>Focused staffing</span></div>
+            <div><strong>Support</strong><span>Every step of the way</span></div>
+            <div><strong>Quality</strong><span>Professional standards</span></div>
+            <div><strong>Growth</strong><span>Built for businesses</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience" id="employers">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Work with Apex</div>
+          <h2>Two ways to get started.</h2>
+        </div>
+        <div class="audience-grid">
+          <article class="audience-card">
+            <div class="eyebrow">For employers</div><h3>Need reliable staff?</h3>
+            <p>Tell us what your business needs and our team can discuss the right staffing solution for your operation.</p>
+            <a class="btn btn-primary" href="#contact">Request Staff →</a>
+          </article>
+          <article class="audience-card" id="jobs">
+            <div class="eyebrow">For workers</div><h3>Looking for work?</h3>
+            <p>Register your interest with Apex Global and hear about suitable hospitality and service opportunities.</p>
+            <a class="btn btn-outline" href="#contact">Apply Today →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Get in touch</div>
+          <h2>Let's talk about what you need.</h2>
+          <p>For staffing enquiries, job applications or general questions, contact Mian Alyan at Apex Global Recruitment Ltd.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item"><small>Email</small><a href="mailto:enquiries@apexglobalrecruitment.co.uk">enquiries@apexglobalrecruitment.co.uk</a></div>
+            <div class="contact-item"><small>Contact</small><span>Mian Alyan • 07908111516</span></div>
+            <div class="contact-item"><small>Based in</small><span>Coventry, United Kingdom</span></div>
+            <div class="contact-item"><small>Service areas</small><span>Coventry, Birmingham, Hinckley, Daventry &amp; surrounding areas</span></div>
+            <div class="contact-item"><small>Employer enquiries</small><span>Request staff for your hospitality or service business.</span></div>
+            <div class="contact-item"><small>Candidate enquiries</small><span>Register your interest in current and future opportunities.</span></div>
+          </div>
+          <form action="mailto:enquiries@apexglobalrecruitment.co.uk" method="post" enctype="text/plain">
+            <input name="name" placeholder="Full name" required>
+            <input type="email" name="email" placeholder="Email address" required>
+            <select name="enquiry"><option>I'm an employer</option><option>I'm looking for work</option><option>General enquiry</option></select>
+            <input name="phone" placeholder="Phone number">
+            <textarea name="message" placeholder="Tell us how we can help"></textarea>
+            <button class="btn btn-primary" type="submit">Send Enquiry →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div><div class="footer-brand">APEX GLOBAL RECRUITMENT LTD</div><small>Quality Staff • Stronger Businesses</small></div>
+      <small>© 2026 Apex Global Recruitment Ltd. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>
